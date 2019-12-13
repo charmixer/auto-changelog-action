@@ -1,0 +1,23 @@
+name: 'Changelog Generator'
+description: 'Automatic changelog generation'
+inputs:
+  owner:
+    description: 'The owner of the repository to generate a changelog from'
+    required: true
+  repository:
+    description: 'The repository to generate changelog from'
+    required: true
+  branch:
+    description: 'The branch to use'
+    required: true
+    default: 'master'
+outputs:
+  changelog: # id of output
+    description: 'The formatted changelog'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.owner }}
+    - ${{ inputs.repository }}
+    - ${{ inputs.branch }}

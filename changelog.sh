@@ -13,17 +13,17 @@ DUE_TAG=$7
 EXCLUDE_TAGS=$8
 DATE_FORMAT=$9
 
-if [ -z "$USER"]; then
+if [ -z "$USER" ]; then
   echo "Missing user input [\$1]"
   exit 1
 fi
 
-if [ -z "$PROJECT"]; then
+if [ -z "$PROJECT" ]; then
   echo "Missing project input [\$2]"
   exit 1
 fi
 
-if [ -z "$RELEASE_BRANCH"]; then
+if [ -z "$RELEASE_BRANCH" ]; then
   echo "Missing release branch input [\$3]"
   exit 1
 fi

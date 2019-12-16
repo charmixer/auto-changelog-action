@@ -1,16 +1,35 @@
 name: 'Changelog Generator'
 description: 'Automatic changelog generation'
 inputs:
-  owner:
-    description: 'The owner of the repository to generate a changelog from'
+  user:
+    description: 'Username of the owner of target GitHub repo (required)'
     required: true
-  repository:
-    description: 'The repository to generate changelog from'
+  project:
+    description: 'Name of project on GitHub (required)'
     required: true
-  branch:
-    description: 'The branch to use'
+  release_branch:
+    description: 'Limit pull requests to the release branch, such as master or release (required, default: master)'
     required: true
     default: 'master'
+  output:
+    description: 'Output file. To print to STDOUT instead, use blank as path. (required, default: CHANGELOG.md)'
+    required: true
+    default: 'CHANGELOG.md'
+  token:
+    description: 'To make more than 50 requests per hour your GitHub token is required. You can generate it at: https://github.com/settings/tokens/new<Paste>'
+    required: false
+  since_tag:
+    description: 'Changelog will start after specified tag.'
+    required: false
+  due_tag:
+    description: 'Changelog will end before specified tag.'
+    required: false
+  exclude_tags:
+    description: 'Changelog will exclude specified tags (comma seperated)'
+    required: false
+  date_format:
+    description: 'Date format. Default is %Y-%m-%d'
+    required: false
 outputs:
   changelog: # id of output
     description: 'The formatted changelog'
@@ -18,6 +37,12 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.owner }}
-    - ${{ inputs.repository }}
+    - ${{ inputs.user }}
+    - ${{ inputs.project }}
     - ${{ inputs.branch }}
+    - ${{ inputs.output }}
+    - ${{ inputs.token }}
+    - ${{ inputs.since_tag }}
+    - ${{ inputs.due_tag }}
+    - ${{ inputs.exclude_tags }}
+    - ${{ inputs.date_format }}

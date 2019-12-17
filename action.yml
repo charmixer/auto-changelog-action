@@ -2,10 +2,10 @@ name: 'Changelog Generator'
 description: 'Automatic changelog generation'
 inputs:
   user:
-    description: 'Username of the owner of target GitHub repo (required)'
+    description: 'Username of the owner of target GitHub repo (default: extracted from $GITHUB_REPOSITORY)'
     required: false
   project:
-    description: 'Name of project on GitHub (required)'
+    description: 'Name of project on GitHub (default: extracted from $GITHUB_REPOSITORY)'
     required: false
   release_branch:
     description: 'Limit pull requests to the release branch, such as master or release (required, default: master)'

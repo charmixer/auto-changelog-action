@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM ferrarimarco/github-changelog-generator:latest
+FROM ferrarimarco/github-changelog-generator:1.15.0
 
 COPY changelog.sh /changelog.sh
 

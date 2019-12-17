@@ -1,3 +1,38 @@
+# Available inputs
+
+```yaml
+user:
+  description: 'Username of the owner of target GitHub repo (default: extracted from $GITHUB_REPOSITORY)'
+  required: false
+project:
+  description: 'Name of project on GitHub (default: extracted from $GITHUB_REPOSITORY)'
+  required: false
+release_branch:
+  description: 'Limit pull requests to the release branch, such as master or release (required, default: master)'
+  required: false
+  default: 'master'
+output:
+  description: 'Output file. To print to STDOUT instead, use blank as path. (required, default: CHANGELOG.md)'
+  required: false
+  default: 'CHANGELOG.md'
+token:
+  description: 'To make more than 50 requests per hour your GitHub token is required. You can generate it at: https://github.com/settings/tokens/new<Paste>'
+  required: false
+since_tag:
+  description: 'Changelog will start after specified tag.'
+  required: false
+due_tag:
+  description: 'Changelog will end before specified tag.'
+  required: false
+exclude_tags:
+  description: 'Changelog will exclude specified tags (comma seperated)'
+  required: false
+date_format:
+  description: 'Date format. Default is %Y-%m-%d'
+  required: false
+```
+
+
 # Example
 
 ```yaml

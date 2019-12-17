@@ -33,9 +33,6 @@ inputs:
   date_format:
     description: 'Date format. Default is %Y-%m-%d'
     required: false
-outputs:
-  changelog: # id of output
-    description: 'The formatted changelog'
 runs:
   using: 'docker'
   image: 'Dockerfile'

@@ -1,4 +1,4 @@
-name: 'Auto Changelog Generator Action'
+name: 'Automatic Changelog Generator'
 description: 'Automatic changelog generation'
 branding:
   icon: book-open

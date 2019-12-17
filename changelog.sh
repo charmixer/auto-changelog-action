@@ -1,5 +1,15 @@
 #!/bin/sh
 
+# set default values
+if [ -z "$INPUT_USER" ]; then
+  INPUT_USER=$(echo $GITHUB_REPOSITORY | cut -d/ -f1 )
+fi
+
+if [ -z "$INPUT_PROJECT" ]; then
+  INPUT_PROJECT=$(echo $GITHUB_REPOSITORY | cut -d/ -f2- )
+fi
+
+# build args
 ARG_USER=""
 if [ ! -z "$INPUT_USER" ]; then
   ARG_USER="--user $INPUT_USER"
@@ -45,6 +55,6 @@ if [ ! -z "$INPUT_DATE_FORMAT" ]; then
   ARG_DATE_FORMAT="--date-format $INPUT_DATE_FORMAT"
 fi
 
+# build changelog
 echo "Running: github_changelog_generator $ARG_USER $ARG_PROJECT $ARG_RELEASE_BRANCH $ARG_OUTPUT $ARG_TOKEN $ARG_SINE_TAG $ARG_DUE_TAG $ARG_EXCLUDE_TAGS $ARG_DATE_FORMAT"
-
 github_changelog_generator $ARG_USER $ARG_PROJECT $ARG_RELEASE_BRANCH $ARG_OUTPUT $ARG_TOKEN $ARG_SINE_TAG $ARG_DUE_TAG $ARG_EXCLUDE_TAGS $ARG_DATE_FORMAT

@@ -3,17 +3,17 @@ description: 'Automatic changelog generation'
 inputs:
   user:
     description: 'Username of the owner of target GitHub repo (required)'
-    required: true
+    required: false
   project:
     description: 'Name of project on GitHub (required)'
-    required: true
+    required: false
   release_branch:
     description: 'Limit pull requests to the release branch, such as master or release (required, default: master)'
-    required: true
+    required: false
     default: 'master'
   output:
     description: 'Output file. To print to STDOUT instead, use blank as path. (required, default: CHANGELOG.md)'
-    required: true
+    required: false
     default: 'CHANGELOG.md'
   token:
     description: 'To make more than 50 requests per hour your GitHub token is required. You can generate it at: https://github.com/settings/tokens/new<Paste>'

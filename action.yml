@@ -1,5 +1,5 @@
 name: 'Automatic Changelog Generator'
-description: 'Creates or updates a changelog file in your repository with the help of https://github.com/github-changelog-generator/github-changelog-generator'
+description: 'Creates or updates a changelog file in your repository with the help of the github-changelog-generator project'
 branding:
   icon: book-open
   color: green

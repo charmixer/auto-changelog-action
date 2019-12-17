@@ -1,5 +1,8 @@
-name: 'Changelog Generator'
+name: 'Auto Changelog Generator Action'
 description: 'Automatic changelog generation'
+branding:
+  icon: book-open
+  color: green
 inputs:
   user:
     description: 'Username of the owner of target GitHub repo (default: extracted from $GITHUB_REPOSITORY)'

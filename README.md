@@ -27,6 +27,9 @@ due_tag:
 exclude_tags:
   description: 'Changelog will exclude specified tags (comma seperated)'
   required: false
+exclude_labels:
+  description: 'Issues with the specified labels will be excluded from changelog. Default is "duplicate,question,invalid,wontfix".'
+  required: false
 date_format:
   description: 'Date format. Default is %Y-%m-%d'
   required: false

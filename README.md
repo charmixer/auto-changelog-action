@@ -16,7 +16,7 @@ output:
   required: false
   default: 'CHANGELOG.md'
 base:
-  description: 'Optional base file to append generated changes to'
+  description: 'Optional base file to append generated changes to (default: HISTORY.md)'
   required: false
 token:
   description: 'To make more than 50 requests per hour your GitHub token is required. You can generate it at: https://github.com/settings/tokens/new<Paste>'

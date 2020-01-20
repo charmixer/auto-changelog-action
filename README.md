@@ -15,6 +15,9 @@ output:
   description: 'Output file. To print to STDOUT instead, use blank as path. (required, default: CHANGELOG.md)'
   required: false
   default: 'CHANGELOG.md'
+base:
+  description: 'Optional base file to append generated changes to'
+  required: false
 token:
   description: 'To make more than 50 requests per hour your GitHub token is required. You can generate it at: https://github.com/settings/tokens/new<Paste>'
   required: false

@@ -36,6 +36,9 @@ exclude_labels:
 date_format:
   description: 'Date format. Default is %Y-%m-%d'
   required: false
+future_release:
+  description: 'Put the unreleased changes in the specified release number.'
+  required: false
 ```
 
 

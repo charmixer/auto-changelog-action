@@ -66,7 +66,7 @@ if [ ! -z "$INPUT_EXCLUDE_LABELS" ]; then
 fi
 
 ARG_FUTURE_RELEASE=""
-if [ ! -z "$ARG_FUTURE_RELEASE" ]; then
+if [ ! -z "$INPUT_FUTURE_RELEASE" ]; then
   ARG_FUTURE_RELEASE="--future-release $INPUT_FUTURE_RELEASE"
 fi
 

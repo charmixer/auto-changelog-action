@@ -67,7 +67,7 @@ fi
 
 ARG_FUTURE_RELEASE=""
 if [ ! -z "$ARG_FUTURE_RELEASE" ]; then
-  ARG_FUTURE_RELEASE="--future-release ARG_FUTURE_RELEASE="
+  ARG_FUTURE_RELEASE="--future-release $INPUT_FUTURE_RELEASE"
 fi
 
 # build changelog

@@ -56,3 +56,4 @@ runs:
     - ${{ inputs.due_tag }}
     - ${{ inputs.exclude_tags }}
     - ${{ inputs.date_format }}
+    - ${{ inputs.future_release }}

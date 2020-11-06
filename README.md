@@ -39,6 +39,9 @@ date_format:
 future_release:
   description: 'Put the unreleased changes in the specified release number.'
   required: false
+issue_line_labels:
+  description: 'The specified labels will be shown in brackets next to each matching issue. Use "ALL" to show all labels. Default is [].'
+  required: false
 ```
 
 

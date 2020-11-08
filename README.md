@@ -42,6 +42,12 @@ future_release:
 issue_line_labels:
   description: 'The specified labels will be shown in brackets next to each matching issue. Use "ALL" to show all labels. Default is [].'
   required: false
+github_site:
+  description: 'The Enterprise GitHub site where your project is hosted if using GitHub Enterprise.'
+  required: false
+github_api:
+  description: 'The enterprise endpoint to use for your GitHub API if using GitHub Enterprise.'
+  required: false
 ```
 
 

@@ -86,8 +86,8 @@ if [ ! -z "$INPUT_GITHUB_API" ]; then
 fi
 
 ARG_EXCLUDE_TAGS_REGEX=""
-if [ ! -z "$ARG_EXCLUDE_TAGS_REGEX" ]; then
-  ARG_EXCLUDE_TAGS_REGEX="--exclude-tags-regex $ARG_EXCLUDE_TAGS_REGEX"
+if [ ! -z "$INPUT_EXCLUDE_TAGS_REGEX" ]; then
+  ARG_EXCLUDE_TAGS_REGEX="--exclude-tags-regex $INPUT_EXCLUDE_TAGS_REGEX"
 fi
 
 # build changelog

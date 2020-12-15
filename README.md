@@ -48,6 +48,9 @@ github_site:
 github_api:
   description: 'The enterprise endpoint to use for your GitHub API if using GitHub Enterprise.'
   required: false
+exclude_tags_regex:
+  description: 'Apply a regular expression on tag names so that they can be excluded, for example: --exclude-tags-regex ".*+d{1,}".'
+  required: false
 ```
 
 

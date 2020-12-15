@@ -87,7 +87,7 @@ fi
 
 ARG_EXCLUDE_TAGS_REGEX=""
 if [ ! -z "$ARG_EXCLUDE_TAGS_REGEX" ]; then
-  ="--exclude-tags-regex $ARG_EXCLUDE_TAGS_REGEX"
+  ARG_EXCLUDE_TAGS_REGEX="--exclude-tags-regex $ARG_EXCLUDE_TAGS_REGEX"
 fi
 
 # build changelog

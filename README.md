@@ -77,7 +77,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Generate changelog
-        uses: charmixer/auto-changelog-action@v1.1
+        uses: charmixer/auto-changelog-action@v1
         with:
           token: ${{ secrets.YOUR_GITHUB_TOKEN or GITHUB_TOKEN }}
 

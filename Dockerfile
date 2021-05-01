@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM githubchangeloggenerator/github-changelog-generator:1.16.1
+FROM githubchangeloggenerator/github-changelog-generator:1.16.2
 
 COPY changelog.sh /changelog.sh
 
